@@ -26,6 +26,7 @@ services:
       - './etc-pihole:/etc/pihole'
       - './etc-dnsmasq.d:/etc/dnsmasq.d'
     restart: unless-stopped
+    stop_grace_period: 2m
     networks:
       - pihole
 
