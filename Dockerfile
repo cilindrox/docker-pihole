@@ -1,4 +1,4 @@
-FROM pihole/pihole:2022.02.1
+FROM pihole/pihole:2022.04.2
 
 COPY unbound-pihole.conf /etc/unbound/unbound.conf.d/pi-hole.conf
 COPY start_unbound_and_s6_init.sh start_unbound_and_s6_init.sh
