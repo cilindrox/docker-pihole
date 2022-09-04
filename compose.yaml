@@ -1,7 +1,7 @@
 services:
   pihole:
     container_name: pihole
-    image: cilindrox/pihole:0.1.1
+    image: cilindrox/pihole:1.0.0
     build:
       context: .
       dockerfile: Dockerfile
@@ -21,6 +21,7 @@ services:
       ServerIP: 192.168.1.10
       WEBPASSWORD: ${WEBPASSWORD:?Please configure WEBPASSWORD in the .env file}
     volumes:
+      - './unbound-pihole.conf:/etc/unbound/unbound.conf.d/pi-hole.conf:ro'
       - './etc-pihole:/etc/pihole'
       - './etc-dnsmasq.d:/etc/dnsmasq.d'
     restart: unless-stopped
