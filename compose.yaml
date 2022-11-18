@@ -1,7 +1,7 @@
 services:
   pihole:
     container_name: pihole
-    image: cilindrox/pihole:1.0.1
+    image: cilindrox/pihole:1.1.0
     build:
       context: .
       dockerfile: Dockerfile
