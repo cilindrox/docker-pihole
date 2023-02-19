@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1.4
 
-FROM pihole/pihole:2022.11.1
+FROM pihole/pihole:2023.02.2
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
 		dns-root-data \

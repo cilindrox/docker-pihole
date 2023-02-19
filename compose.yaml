@@ -18,7 +18,6 @@ services:
       TZ: 'America/Montevideo'
       SKIPGRAVITYONBOOT: 1
       FTLCONF_LOCAL_IPV4: 192.168.1.10
-      ServerIP: 192.168.1.10
       WEBPASSWORD: ${WEBPASSWORD:?Please configure WEBPASSWORD in the .env file}
     volumes:
       - './unbound-pihole.conf:/etc/unbound/unbound.conf.d/pi-hole.conf:ro'
