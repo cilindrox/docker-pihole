@@ -1,7 +1,7 @@
 services:
   pihole:
     container_name: pihole
-    image: cilindrox/pihole:1.1.1
+    image: cilindrox/pihole:2023.05.1
     build:
       context: .
       dockerfile: Dockerfile
@@ -26,8 +26,13 @@ services:
     restart: unless-stopped
     stop_grace_period: 2m
     networks:
-      - pihole
+      pihole:
+        ipv4_address: 10.89.6.15
 
 networks:
   pihole:
-    driver: bridge
+    name: pihole
+    enable_ipv6: false
+    ipam:
+      config:
+        - subnet: 10.89.6.0/24
